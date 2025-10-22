@@ -79,21 +79,22 @@ const nodeDetails = {
     additionalInfo: 'Setiap pallet yang keluar harus melewati tunnel RFID. Sistem ini menghalangi shipment dengan discrepancy dan menjaga 99.9% accuracy.'
   },
   C1: {
-    title: 'Checkpoint ItemOptix',
+    title: 'Middleware Layer',
     category: 'Central Hub',
-    type: 'Central Management Software',
-    description: 'Platform software terpusat yang mengintegrasikan semua data dari sistem RFID warehouse (UR4/UR8) dan handheld devices (MC50/C75) untuk memberikan visibility penuh terhadap inventory real-time dan demand forecasting.',
-    vendor: 'Checkpoint Systems',
-    product: 'Checkpoint ItemOptix Cloud Platform',
+    type: 'Data Integration Platform',
+    description: 'Custom middleware application yang mengintegrasikan semua data dari Chainway devices (UR4/UR8, MC50, C75) melalui HTTP API atau WebSocket. Middleware menerima data real-time dari field devices, memproses data, dan mengirimkan ke database backend untuk storage dan analytics.',
+    vendor: 'Custom Development',
+    product: 'Warehouse RFID Middleware - HTTP/WebSocket Gateway',
     specs: [
-      'Real-time Inventory Visibility',
-      'Multi-Reader Integration',
-      'Automated Reporting & Analytics',
-      'Discrepancy Management',
-      'Demand Forecasting',
-      'API Integration'
+      'HTTP REST API Gateway untuk Chainway Devices',
+      'WebSocket Real-time Data Streaming',
+      'Data Parsing & Validation Engine',
+      'Connection Pooling & Load Balancing',
+      'Error Handling & Retry Mechanism',
+      'Database Backend Integration',
+      'Request/Response Logging & Monitoring'
     ],
-    additionalInfo: 'ItemOptix menjadi jantung operasional warehouse. Dengan visibility penuh, tim dapat merespons order dengan cepat dan akurat, mengurangi overstocks dan tied-up capital.'
+    additionalInfo: 'Middleware berfungsi sebagai jembatan antara Chainway field devices dan database backend. Menerima RFID scan data dari UR4/UR8, inventory updates dari MC50, dan audit logs dari C75. Semua data dikonversi ke format standard, divalidasi, dan diteruskan ke backend database untuk real-time inventory visibility dan historical analytics.'
   }
 };
 
@@ -178,7 +179,7 @@ const initialNodes = [
   {
     id: 'C1',
     type: 'default',
-    data: { label: 'Checkpoint\nItemOptix\nCentral Hub' },
+    data: { label: 'Middleware\nLayer\n(API/WS)' },
     position: { x: 475, y: 350 },
     style: {
       background: '#9D6BFF',
@@ -292,7 +293,7 @@ function IntegrationFlowchart() {
     <div style={{ width: '100vw', height: '100vh' }}>
       <div className="header">
         <h1>Warehouse Integration Flow</h1>
-        <p>Chainway RFID Solution - Inbound → Storage → Audit → Outbound - Klik node untuk detail</p>
+        <p>Chainway RFID Solution - Inbound → Storage → Audit → Outbound → Middleware API Gateway → Backend DB</p>
       </div>
       
       <ReactFlow
@@ -385,7 +386,7 @@ function IntegrationFlowchart() {
         </div>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#9D6BFF' }}></span>
-          <span>ItemOptix Hub</span>
+          <span>Middleware (API/WS)</span>
         </div>
       </div>
     </div>
