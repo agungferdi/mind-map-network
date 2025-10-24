@@ -337,12 +337,18 @@ const nodeDetails = {
 };
 
 const initialNodes = [
-  // Main Node
+  // Clean grid-based layout: 5 columns × 3 rows
+  // Column spacing: 250px, Row spacing: 180px
+  // Row 0: Main hub (y=0)
+  // Row 1: 5 phases (y=180)
+  // Row 2: Step nodes (y=380)
+
+  // Row 0: Main Node - centered
   {
     id: 'MAIN',
     type: 'default',
     data: { label: 'Retail Flow\nwith AIDC' },
-    position: { x: 475, y: 0 },
+    position: { x: 450, y: 0 },
     style: {
       background: '#FF6B6B',
       color: 'white',
@@ -357,12 +363,12 @@ const initialNodes = [
     }
   },
 
-  // 5 Main Phases
+  // Row 1: 5 Main Phases (y=180) - 250px spacing
   {
     id: 'PHASE1',
     type: 'default',
     data: { label: 'Phase 1\nReceiving &\nWarehouse' },
-    position: { x: 50, y: 120 },
+    position: { x: 25, y: 180 },
     style: {
       background: '#4ECDC4',
       color: 'white',
@@ -372,14 +378,14 @@ const initialNodes = [
       fontSize: '11px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '110px'
+      width: '120px'
     }
   },
   {
     id: 'PHASE2',
     type: 'default',
     data: { label: 'Phase 2\nStocking &\nMerchandise' },
-    position: { x: 210, y: 120 },
+    position: { x: 225, y: 180 },
     style: {
       background: '#95E1D3',
       color: '#333',
@@ -389,14 +395,14 @@ const initialNodes = [
       fontSize: '11px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '110px'
+      width: '120px'
     }
   },
   {
     id: 'PHASE3',
     type: 'default',
     data: { label: 'Phase 3\nCustomer\nShopping' },
-    position: { x: 370, y: 120 },
+    position: { x: 425, y: 180 },
     style: {
       background: '#F7DC6F',
       color: '#333',
@@ -406,14 +412,14 @@ const initialNodes = [
       fontSize: '11px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '110px'
+      width: '120px'
     }
   },
   {
     id: 'PHASE4',
     type: 'default',
     data: { label: 'Phase 4\nExit &\nSecurity' },
-    position: { x: 530, y: 120 },
+    position: { x: 625, y: 180 },
     style: {
       background: '#FF9999',
       color: 'white',
@@ -423,14 +429,14 @@ const initialNodes = [
       fontSize: '11px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '110px'
+      width: '120px'
     }
   },
   {
     id: 'PHASE5',
     type: 'default',
     data: { label: 'Phase 5\nPost-Sale &\nReconciliation' },
-    position: { x: 690, y: 120 },
+    position: { x: 825, y: 180 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -440,16 +446,17 @@ const initialNodes = [
       fontSize: '11px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '110px'
+      width: '120px'
     }
   },
 
-  // Phase 1 Details
+  // Row 2: Step nodes (y=380) - organized by phase with proper spacing
+  // Phase 1 column (x=25)
   {
     id: 'TAGGING',
     type: 'default',
     data: { label: 'Tagging\n(Checkpoint)' },
-    position: { x: 0, y: 250 },
+    position: { x: 10, y: 380 },
     style: {
       background: '#4ECDC4',
       color: 'white',
@@ -466,7 +473,7 @@ const initialNodes = [
     id: 'RECEIVING',
     type: 'default',
     data: { label: 'Receiving\nScan (C72)' },
-    position: { x: 100, y: 250 },
+    position: { x: 40, y: 380 },
     style: {
       background: '#4ECDC4',
       color: 'white',
@@ -480,12 +487,12 @@ const initialNodes = [
     }
   },
 
-  // Phase 2 Details
+  // Phase 2 column (x=225)
   {
     id: 'STOCKING',
     type: 'default',
     data: { label: 'Stocking\n(Placement)' },
-    position: { x: 200, y: 250 },
+    position: { x: 210, y: 380 },
     style: {
       background: '#95E1D3',
       color: '#333',
@@ -502,7 +509,7 @@ const initialNodes = [
     id: 'MONITORING',
     type: 'default',
     data: { label: 'Display\nMonitoring' },
-    position: { x: 300, y: 250 },
+    position: { x: 240, y: 380 },
     style: {
       background: '#95E1D3',
       color: '#333',
@@ -516,12 +523,12 @@ const initialNodes = [
     }
   },
 
-  // Phase 3 Details
+  // Phase 3 column (x=425) - 3 nodes
   {
     id: 'BROWSING',
     type: 'default',
     data: { label: 'Customer\nBrowsing' },
-    position: { x: 350, y: 250 },
+    position: { x: 390, y: 380 },
     style: {
       background: '#F7DC6F',
       color: '#333',
@@ -538,7 +545,7 @@ const initialNodes = [
     id: 'CHECKOUT_SELF',
     type: 'default',
     data: { label: 'Self-Checkout\n(Kiosk)' },
-    position: { x: 450, y: 250 },
+    position: { x: 420, y: 380 },
     style: {
       background: '#F7DC6F',
       color: '#333',
@@ -555,7 +562,7 @@ const initialNodes = [
     id: 'CHECKOUT_CASHIER',
     type: 'default',
     data: { label: 'Cashier\nCheckout (POS+)' },
-    position: { x: 550, y: 250 },
+    position: { x: 450, y: 380 },
     style: {
       background: '#F7DC6F',
       color: '#333',
@@ -569,12 +576,12 @@ const initialNodes = [
     }
   },
 
-  // Phase 4 Details
+  // Phase 4 column (x=625)
   {
     id: 'EXIT_GATE',
     type: 'default',
     data: { label: 'Exit Gate\nVerification' },
-    position: { x: 500, y: 250 },
+    position: { x: 610, y: 380 },
     style: {
       background: '#FF9999',
       color: 'white',
@@ -591,7 +598,7 @@ const initialNodes = [
     id: 'VALIDATION',
     type: 'default',
     data: { label: 'Validation\nLogic' },
-    position: { x: 600, y: 250 },
+    position: { x: 640, y: 380 },
     style: {
       background: '#FF9999',
       color: 'white',
@@ -605,12 +612,12 @@ const initialNodes = [
     }
   },
 
-  // Phase 5 Details
+  // Phase 5 column (x=825) - 4 nodes
   {
     id: 'INVENTORY_UPDATE',
     type: 'default',
     data: { label: 'Inventory\nUpdate' },
-    position: { x: 650, y: 250 },
+    position: { x: 800, y: 380 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -627,7 +634,7 @@ const initialNodes = [
     id: 'CYCLE_COUNT',
     type: 'default',
     data: { label: 'Cycle Count\n& Audit' },
-    position: { x: 750, y: 250 },
+    position: { x: 830, y: 380 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -644,7 +651,7 @@ const initialNodes = [
     id: 'INVESTIGATION',
     type: 'default',
     data: { label: 'Loss Prevention\nInvestigation' },
-    position: { x: 850, y: 250 },
+    position: { x: 860, y: 380 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -661,7 +668,7 @@ const initialNodes = [
     id: 'REPORTING',
     type: 'default',
     data: { label: 'Reporting &\nAnalytics' },
-    position: { x: 950, y: 250 },
+    position: { x: 890, y: 380 },
     style: {
       background: '#9D6BFF',
       color: 'white',
