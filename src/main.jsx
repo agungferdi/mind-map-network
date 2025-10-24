@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import IntegrationFlowchart from './IntegrationFlowchart.jsx'
+import RetailFlowMindmap from './RetailFlowMindmap.jsx'
 import './index.css'
 
 function MainApp() {
@@ -65,12 +66,30 @@ function MainApp() {
               transition: 'all 0.3s'
             }}
           >
-            Supply Chain Integration
+            Warehouse Integration
+          </button>
+          <button
+            onClick={() => handlePageSwitch('retail')}
+            style={{
+              padding: '8px 16px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              fontSize: '13px',
+              background: currentPage === 'retail' ? '#FF9999' : '#ddd',
+              color: currentPage === 'retail' ? 'white' : '#333',
+              transition: 'all 0.3s'
+            }}
+          >
+            Retail Flow AIDC
           </button>
         </div>
       </div>
       <div style={{ marginTop: '60px' }}>
-        {currentPage === 'network' ? <App /> : <IntegrationFlowchart />}
+        {currentPage === 'network' && <App />}
+        {currentPage === 'integration' && <IntegrationFlowchart />}
+        {currentPage === 'retail' && <RetailFlowMindmap />}
       </div>
     </div>
   );
