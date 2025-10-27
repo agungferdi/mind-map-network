@@ -12,78 +12,88 @@ import './IntegrationFlowchart.css';
 
 const nodeDetails = {
   W1: {
-    title: 'Inbound Reception (UR4/UR8)',
+    title: 'Inbound Reception (URA4)',
     category: 'Warehouse Inbound',
     type: 'Fixed RFID Portal',
-    description: 'Penerimaan barang di mana setiap pallet dilengkapi RFID label. Fixed RFID readers UR4/UR8 ditempatkan di pintu masuk untuk automated reading. Sistem membaca hingga 1300+ tags per detik dengan akurasi 99.9%.',
-    vendor: 'Chainway',
-    product: 'Chainway UR4/UR8 Fixed RFID Reader',
+    description: 'Penerimaan barang di mana setiap pallet dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal.',
+    brand: 'Chainway',
+    product: 'Chainway URA4 Fixed RFID Reader',
     specs: [
-      'Chip: Impinj E710',
-      'Max Read Range: 30 meter',
-      'Read Rate: 1300+ tags/detik',
-      'Antena: 4-Port (UR4) atau 8-Port (UR8)',
-      'Koneksi: 4G/WiFi/POE'
+      'OS: Android 9.0',
+      'RFID Chip: Impinj E710 / R2000',
+      'Frequency: 860-960 MHz (UHF)',
+      '4-Channel Fixed Reader',
+      'Ports: RS232, RJ45, HDMI',
+      'Connectivity: TCP/IP, HTTP API',
+      'Application: Warehouse, Retail, Jewelry, Clothing'
     ],
-    additionalInfo: 'Barang otomatis tercatat di inventory digital tanpa perlu operator menghentikan aliran. Akurasi mencapai 99.9% dan proses sangat cepat.'
+    additionalInfo: 'Barang otomatis tercatat di inventory digital tanpa perlu operator menghentikan aliran. URA4 dengan Android 9.0 dan Impinj chip memberikan stabilitas tinggi dan kompatibilitas dengan berbagai antenna.'
   },
   W2: {
-    title: 'Storage & Inventory (MC50)',
+    title: 'Storage & Inventory (C5)',
     category: 'Warehouse',
-    type: 'Mobile Inventory Management',
-    description: 'MC50 dengan 5G connectivity untuk real-time inventory tracking dan storage optimization. Operator dapat melakukan stock checking di mana saja di warehouse dengan response time yang sangat cepat.',
-    vendor: 'Chainway',
-    product: 'Chainway MC50 Handheld Computer',
+    type: 'Handheld UHF RFID Computer',
+    description: 'C5 handheld UHF RFID computer untuk real-time inventory tracking dan storage optimization. Operator dapat melakukan stock checking di mana saja di warehouse dengan mobility tinggi.',
+    brand: 'Chainway',
+    product: 'Chainway C5 Handheld UHF RFID Computer',
     specs: [
-      'Display: 6" HD (18:9)',
-      'Chip: Impinj E710 RFID',
-      '5G Ready, WiFi 6',
-      'Max Read Range: 30 meter',
-      '5000mAh Battery, 1.5m Drop Proof',
-      'Camera + NFC + Barcode'
+      'OS: Android 13',
+      'Display: 6.0" HD+ (1440x720)',
+      'CPU: Octa-core 2.0GHz',
+      'RFID: UHF Gen2 (EPC C1G2)',
+      'Read Range: 0-20m (depends on tag & antenna)',
+      'Battery: 5200mAh (Removable)',
+      'Durability: IP65, 1.5m Drop Test',
+      '1D/2D Barcode Scanner',
+      'NFC, 4G, WiFi, Bluetooth 5.0'
     ],
-    additionalInfo: 'Dengan 5G connectivity, data tersinkronisasi real-time dengan ItemOptix. Visibility penuh terhadap inventory membuat storage optimization menjadi lebih mudah dan efisien.'
+    additionalInfo: 'C5 dengan Android 13 dan UHF RFID reader memberikan flexibility untuk mobile inventory management. Device yang tangguh (IP65, 1.5m drop proof) cocok untuk warehouse environment yang demanding.'
   },
   W3: {
-    title: 'Cycle Count & Audit (C75)',
+    title: 'Cycle Count & Audit (C72)',
     category: 'Warehouse',
     type: 'Inventory Verification',
-    description: 'C75 dengan built-in printer untuk cycle count dan audit inventory. Operator bisa langsung mencetak label dan manifest tanpa perlu perangkat tambahan.',
-    vendor: 'Chainway',
-    product: 'Chainway C75 Handheld Computer with Printer',
+    description: 'C72 handheld RFID reader untuk cycle count dan audit inventory. Device yang powerful dengan RFID reading capability untuk verifikasi inventory secara cepat dan akurat.',
+    brand: 'Chainway',
+    product: 'Chainway C72 Handheld UHF RFID Reader',
     specs: [
-      'Display: 5.2" IPS 1080P',
-      'Built-in Thermal Printer (85mm/s)',
-      'RFID Reader (Impinj E710)',
-      '8000mAh Battery',
-      'IP65, 1.5m Drop Proof',
-      'Barcode + NFC + Camera'
+      'OS: Android 13',
+      'Display: 6.0" HD+ IPS (1440x720)',
+      'CPU: Octa-core 2.0GHz',
+      'RFID: UHF Gen2 (EPC C1G2)',
+      'Read Range: 0-25m (antenna dependent)',
+      'Battery: 6700mAh (Hot-swap supported)',
+      'Durability: IP67, 1.8m Drop Test',
+      '1D/2D Barcode Scanner',
+      'NFC, 4G, WiFi 6, Bluetooth 5.1'
     ],
-    additionalInfo: 'Cycle count yang biasanya berhari-hari kini hanya butuh beberapa jam. Printing built-in mempercepat pembuatan dokumentasi dan manifests.'
+    additionalInfo: 'Cycle count yang biasanya berhari-hari kini hanya butuh beberapa jam. C72 dengan Android 13, battery 6700mAh, dan IP67 rating memberikan reliability tinggi untuk intensive warehouse operations.'
   },
   W4: {
-    title: 'Outbound Verification (UR4/UR8)',
-    category: 'Warehouse',
+    title: 'Outbound Verification (URA4)',
+    category: 'Warehouse Outbound',
     type: 'Automated Tunnel Check',
-    description: 'Tunnel RFID dengan UR4/UR8 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah barang yang tidak ter-verify meninggalkan warehouse.',
-    vendor: 'Chainway',
-    product: 'Chainway UR4/UR8 Fixed RFID Reader',
+    description: 'Tunnel RFID dengan URA4 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah barang yang tidak ter-verify meninggalkan warehouse.',
+    brand: 'Chainway',
+    product: 'Chainway URA4 Fixed RFID Reader',
     specs: [
-      'Impinj E710 Chip',
-      '30 meter Read Range',
-      '1300+ tags/detik',
+      'OS: Android 9.0',
+      'RFID Chip: Impinj E710 / R2000',
+      'Frequency: 860-960 MHz (UHF)',
+      '4-Channel Fixed Reader',
+      'Ports: RS232, RJ45, HDMI',
+      'Connectivity: TCP/IP, HTTP API',
       'Automated Rejection Alert',
-      'Accuracy: 99.9%',
-      '4-Port (UR4) atau 8-Port (UR8)'
+      'High Stability & Performance'
     ],
-    additionalInfo: 'Setiap pallet yang keluar harus melewati tunnel RFID. Sistem ini menghalangi shipment dengan discrepancy dan menjaga 99.9% accuracy.'
+    additionalInfo: 'Setiap pallet yang keluar harus melewati tunnel RFID. URA4 dengan 4-channel capability dan high stability mencegah shipment dengan discrepancy. Android 9.0 platform memudahkan integration dengan warehouse management system.'
   },
   C1: {
     title: 'Middleware Layer',
     category: 'Central Hub',
     type: 'Data Integration Platform',
-    description: 'Custom middleware application yang mengintegrasikan semua data dari Chainway devices (UR4/UR8, MC50, C75) melalui HTTP API atau WebSocket. Middleware menerima data real-time dari field devices, memproses data, dan mengirimkan ke database backend untuk storage dan analytics.',
-    vendor: 'Custom Development',
+    description: 'Custom middleware application yang mengintegrasikan semua data dari Chainway devices (URA4, C5, C72) melalui HTTP API atau WebSocket. Middleware menerima data real-time dari field devices, memproses data, dan mengirimkan ke database backend untuk storage dan analytics.',
+    brand: 'Custom Development',
     product: 'Warehouse RFID Middleware - HTTP/WebSocket Gateway',
     specs: [
       'HTTP REST API Gateway untuk Chainway Devices',
@@ -94,7 +104,7 @@ const nodeDetails = {
       'Database Backend Integration',
       'Request/Response Logging & Monitoring'
     ],
-    additionalInfo: 'Middleware berfungsi sebagai jembatan antara Chainway field devices dan database backend. Menerima RFID scan data dari UR4/UR8, inventory updates dari MC50, dan audit logs dari C75. Semua data dikonversi ke format standard, divalidasi, dan diteruskan ke backend database untuk real-time inventory visibility dan historical analytics.'
+    additionalInfo: 'Middleware berfungsi sebagai jembatan antara Chainway field devices dan database backend. Menerima RFID scan data dari URA4, inventory updates dari C5, dan audit logs dari C72. Semua data dikonversi ke format standard, divalidasi, dan diteruskan ke backend database untuk real-time inventory visibility dan historical analytics.'
   }
 };
 
@@ -103,7 +113,7 @@ const initialNodes = [
   {
     id: 'W1',
     type: 'default',
-    data: { label: 'Inbound\nReception\n(UR4/UR8)' },
+    data: { label: 'Inbound\nReception\n(URA4)' },
     position: { x: 100, y: 150 },
     style: {
       background: '#FF6B6B',
@@ -122,7 +132,7 @@ const initialNodes = [
   {
     id: 'W2',
     type: 'default',
-    data: { label: 'Storage &\nInventory\n(MC50)' },
+    data: { label: 'Storage &\nInventory\n(C5)' },
     position: { x: 350, y: 150 },
     style: {
       background: '#FFB347',
@@ -141,7 +151,7 @@ const initialNodes = [
   {
     id: 'W3',
     type: 'default',
-    data: { label: 'Cycle Count\n& Audit\n(C75)' },
+    data: { label: 'Cycle Count\n& Audit\n(C72)' },
     position: { x: 600, y: 150 },
     style: {
       background: '#FFD700',
@@ -160,7 +170,7 @@ const initialNodes = [
   {
     id: 'W4',
     type: 'default',
-    data: { label: 'Outbound\nVerification\n(UR4/UR8)' },
+    data: { label: 'Outbound\nVerification\n(URA4)' },
     position: { x: 850, y: 150 },
     style: {
       background: '#FF6B6B',
@@ -293,7 +303,7 @@ function IntegrationFlowchart() {
     <div style={{ width: '100vw', height: '100vh' }}>
       <div className="header">
         <h1>Warehouse Integration Flow</h1>
-        <p>Chainway RFID Solution - Inbound → Storage → Audit → Outbound → Middleware API Gateway → Backend DB</p>
+        <p>Chainway RFID Solution - Inbound (URA4) → Storage (C5) → Audit (C72) → Outbound (URA4) → Middleware API Gateway → Backend DB</p>
       </div>
       
       <ReactFlow
@@ -342,8 +352,8 @@ function IntegrationFlowchart() {
               </div>
 
               <div className="modal-section">
-                <h4>Vendor & Produk</h4>
-                <p><strong>Vendor:</strong> {selectedNode.vendor}</p>
+                <h4>Brand & Produk</h4>
+                <p><strong>Brand:</strong> {selectedNode.brand}</p>
                 <p><strong>Produk:</strong> {selectedNode.product}</p>
               </div>
 
@@ -374,15 +384,15 @@ function IntegrationFlowchart() {
         <h3>Legend</h3>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#FF6B6B' }}></span>
-          <span>RFID Gate (UR4/UR8)</span>
+          <span>RFID Gate (URA4)</span>
         </div>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#FFB347' }}></span>
-          <span>Mobile Device (MC50)</span>
+          <span>Handheld (C5)</span>
         </div>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#FFD700' }}></span>
-          <span>Cycle Count (C75)</span>
+          <span>Cycle Count (C72)</span>
         </div>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#9D6BFF' }}></span>
