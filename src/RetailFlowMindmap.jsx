@@ -337,18 +337,18 @@ const nodeDetails = {
 };
 
 const initialNodes = [
-  // Clean grid-based layout: 5 columns × 3 rows
-  // Column spacing: 250px, Row spacing: 180px
-  // Row 0: Main hub (y=0)
-  // Row 1: 5 phases (y=180)
-  // Row 2: Step nodes (y=380)
-
-  // Row 0: Main Node - centered
+  // Vertical flow layout - clean and organized top to bottom
+  // Center column: x=150 for all phase nodes
+  // Step nodes positioned left and right: x=50 and x=250
+  
+  // ═══════════════════════════════════════
+  // ROW 0: MAIN HUB (y=0)
+  // ═══════════════════════════════════════
   {
     id: 'MAIN',
     type: 'default',
     data: { label: 'Retail Flow\nwith AIDC' },
-    position: { x: 450, y: 0 },
+    position: { x: 100, y: 0 },
     style: {
       background: '#FF6B6B',
       color: 'white',
@@ -358,266 +358,283 @@ const initialNodes = [
       fontSize: '13px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '130px',
+      width: '200px',
       boxShadow: '0 0 30px rgba(255, 107, 107, 0.8)'
     }
   },
 
-  // Row 1: 5 Main Phases (y=180) - 250px spacing
+  // ═══════════════════════════════════════
+  // PHASE 1: RECEIVING & WAREHOUSE
+  // ═══════════════════════════════════════
   {
     id: 'PHASE1',
     type: 'default',
-    data: { label: 'Phase 1\nReceiving &\nWarehouse' },
-    position: { x: 25, y: 180 },
+    data: { label: 'Phase 1: Receiving & Warehouse' },
+    position: { x: 75, y: 100 },
     style: {
       background: '#4ECDC4',
       color: 'white',
       border: '2px solid #3ebcb4',
       borderRadius: '10px',
       padding: '12px',
-      fontSize: '11px',
+      fontSize: '12px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '120px'
+      width: '250px'
+    }
+  },
+  
+  // Phase 1 Steps (y=200)
+  {
+    id: 'TAGGING',
+    type: 'default',
+    data: { label: 'Step 0:\nTagging' },
+    position: { x: 50, y: 200 },
+    style: {
+      background: '#4ECDC4',
+      color: 'white',
+      border: '1px solid #3ebcb4',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
     }
   },
   {
+    id: 'RECEIVING',
+    type: 'default',
+    data: { label: 'Step 1:\nReceiving Scan' },
+    position: { x: 190, y: 200 },
+    style: {
+      background: '#4ECDC4',
+      color: 'white',
+      border: '1px solid #3ebcb4',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
+    }
+  },
+
+  // ═══════════════════════════════════════
+  // PHASE 2: STOCKING & MERCHANDISE
+  // ═══════════════════════════════════════
+  {
     id: 'PHASE2',
     type: 'default',
-    data: { label: 'Phase 2\nStocking &\nMerchandise' },
-    position: { x: 225, y: 180 },
+    data: { label: 'Phase 2: Stocking & Merchandise' },
+    position: { x: 75, y: 320 },
     style: {
       background: '#95E1D3',
       color: '#333',
       border: '2px solid #85d1c3',
       borderRadius: '10px',
       padding: '12px',
-      fontSize: '11px',
+      fontSize: '12px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '120px'
+      width: '250px'
+    }
+  },
+  
+  // Phase 2 Steps (y=420)
+  {
+    id: 'STOCKING',
+    type: 'default',
+    data: { label: 'Step 2:\nStocking' },
+    position: { x: 50, y: 420 },
+    style: {
+      background: '#95E1D3',
+      color: '#333',
+      border: '1px solid #85d1c3',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
     }
   },
   {
+    id: 'MONITORING',
+    type: 'default',
+    data: { label: 'Step 3:\nMonitoring' },
+    position: { x: 190, y: 420 },
+    style: {
+      background: '#95E1D3',
+      color: '#333',
+      border: '1px solid #85d1c3',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
+    }
+  },
+
+  // ═══════════════════════════════════════
+  // PHASE 3: CUSTOMER SHOPPING
+  // ═══════════════════════════════════════
+  {
     id: 'PHASE3',
     type: 'default',
-    data: { label: 'Phase 3\nCustomer\nShopping' },
-    position: { x: 425, y: 180 },
+    data: { label: 'Phase 3: Customer Shopping' },
+    position: { x: 75, y: 540 },
     style: {
       background: '#F7DC6F',
       color: '#333',
       border: '2px solid #e7cc5f',
       borderRadius: '10px',
       padding: '12px',
-      fontSize: '11px',
+      fontSize: '12px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '120px'
+      width: '250px'
+    }
+  },
+  
+  // Phase 3 Steps (y=640) - 3 options
+  {
+    id: 'BROWSING',
+    type: 'default',
+    data: { label: 'Step 4:\nBrowsing' },
+    position: { x: 10, y: 640 },
+    style: {
+      background: '#F7DC6F',
+      color: '#333',
+      border: '1px solid #e7cc5f',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
     }
   },
   {
+    id: 'CHECKOUT_SELF',
+    type: 'default',
+    data: { label: 'Step 5A:\nSelf-Checkout' },
+    position: { x: 130, y: 640 },
+    style: {
+      background: '#F7DC6F',
+      color: '#333',
+      border: '1px solid #e7cc5f',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
+    }
+  },
+  {
+    id: 'CHECKOUT_CASHIER',
+    type: 'default',
+    data: { label: 'Step 5B:\nCashier' },
+    position: { x: 250, y: 640 },
+    style: {
+      background: '#F7DC6F',
+      color: '#333',
+      border: '1px solid #e7cc5f',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
+    }
+  },
+
+  // ═══════════════════════════════════════
+  // PHASE 4: EXIT & SECURITY
+  // ═══════════════════════════════════════
+  {
     id: 'PHASE4',
     type: 'default',
-    data: { label: 'Phase 4\nExit &\nSecurity' },
-    position: { x: 625, y: 180 },
+    data: { label: 'Phase 4: Exit & Security' },
+    position: { x: 75, y: 760 },
     style: {
       background: '#FF9999',
       color: 'white',
       border: '2px solid #ef8989',
       borderRadius: '10px',
       padding: '12px',
-      fontSize: '11px',
+      fontSize: '12px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '120px'
+      width: '250px'
+    }
+  },
+  
+  // Phase 4 Steps (y=860)
+  {
+    id: 'EXIT_GATE',
+    type: 'default',
+    data: { label: 'Step 6:\nExit Gate' },
+    position: { x: 50, y: 860 },
+    style: {
+      background: '#FF9999',
+      color: 'white',
+      border: '1px solid #ef8989',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
     }
   },
   {
+    id: 'VALIDATION',
+    type: 'default',
+    data: { label: 'Step 6A:\nValidation' },
+    position: { x: 190, y: 860 },
+    style: {
+      background: '#FF9999',
+      color: 'white',
+      border: '1px solid #ef8989',
+      borderRadius: '8px',
+      padding: '10px',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '110px'
+    }
+  },
+
+  // ═══════════════════════════════════════
+  // PHASE 5: POST-SALE & RECONCILIATION
+  // ═══════════════════════════════════════
+  {
     id: 'PHASE5',
     type: 'default',
-    data: { label: 'Phase 5\nPost-Sale &\nReconciliation' },
-    position: { x: 825, y: 180 },
+    data: { label: 'Phase 5: Post-Sale & Reconciliation' },
+    position: { x: 75, y: 980 },
     style: {
       background: '#9D6BFF',
       color: 'white',
       border: '2px solid #8d5bef',
       borderRadius: '10px',
       padding: '12px',
-      fontSize: '11px',
+      fontSize: '12px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '120px'
+      width: '250px'
     }
   },
-
-  // Row 2: Step nodes (y=380) - organized by phase with proper spacing
-  // Phase 1 column (x=25)
-  {
-    id: 'TAGGING',
-    type: 'default',
-    data: { label: 'Tagging\n(Checkpoint)' },
-    position: { x: 10, y: 380 },
-    style: {
-      background: '#4ECDC4',
-      color: 'white',
-      border: '1px solid #3ebcb4',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-  {
-    id: 'RECEIVING',
-    type: 'default',
-    data: { label: 'Receiving\nScan (C72)' },
-    position: { x: 40, y: 380 },
-    style: {
-      background: '#4ECDC4',
-      color: 'white',
-      border: '1px solid #3ebcb4',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-
-  // Phase 2 column (x=225)
-  {
-    id: 'STOCKING',
-    type: 'default',
-    data: { label: 'Stocking\n(Placement)' },
-    position: { x: 210, y: 380 },
-    style: {
-      background: '#95E1D3',
-      color: '#333',
-      border: '1px solid #85d1c3',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-  {
-    id: 'MONITORING',
-    type: 'default',
-    data: { label: 'Display\nMonitoring' },
-    position: { x: 240, y: 380 },
-    style: {
-      background: '#95E1D3',
-      color: '#333',
-      border: '1px solid #85d1c3',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-
-  // Phase 3 column (x=425) - 3 nodes
-  {
-    id: 'BROWSING',
-    type: 'default',
-    data: { label: 'Customer\nBrowsing' },
-    position: { x: 390, y: 380 },
-    style: {
-      background: '#F7DC6F',
-      color: '#333',
-      border: '1px solid #e7cc5f',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-  {
-    id: 'CHECKOUT_SELF',
-    type: 'default',
-    data: { label: 'Self-Checkout\n(Kiosk)' },
-    position: { x: 420, y: 380 },
-    style: {
-      background: '#F7DC6F',
-      color: '#333',
-      border: '1px solid #e7cc5f',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-  {
-    id: 'CHECKOUT_CASHIER',
-    type: 'default',
-    data: { label: 'Cashier\nCheckout (POS+)' },
-    position: { x: 450, y: 380 },
-    style: {
-      background: '#F7DC6F',
-      color: '#333',
-      border: '1px solid #e7cc5f',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-
-  // Phase 4 column (x=625)
-  {
-    id: 'EXIT_GATE',
-    type: 'default',
-    data: { label: 'Exit Gate\nVerification' },
-    position: { x: 610, y: 380 },
-    style: {
-      background: '#FF9999',
-      color: 'white',
-      border: '1px solid #ef8989',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-  {
-    id: 'VALIDATION',
-    type: 'default',
-    data: { label: 'Validation\nLogic' },
-    position: { x: 640, y: 380 },
-    style: {
-      background: '#FF9999',
-      color: 'white',
-      border: '1px solid #ef8989',
-      borderRadius: '8px',
-      padding: '10px',
-      fontSize: '10px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '95px'
-    }
-  },
-
-  // Phase 5 column (x=825) - 4 nodes
+  
+  // Phase 5 Steps (y=1080) - 4 items
   {
     id: 'INVENTORY_UPDATE',
     type: 'default',
-    data: { label: 'Inventory\nUpdate' },
-    position: { x: 800, y: 380 },
+    data: { label: 'Step 7:\nInventory' },
+    position: { x: 10, y: 1080 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -627,14 +644,14 @@ const initialNodes = [
       fontSize: '10px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '95px'
+      width: '110px'
     }
   },
   {
     id: 'CYCLE_COUNT',
     type: 'default',
-    data: { label: 'Cycle Count\n& Audit' },
-    position: { x: 830, y: 380 },
+    data: { label: 'Step 8:\nCycle Count' },
+    position: { x: 130, y: 1080 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -644,14 +661,14 @@ const initialNodes = [
       fontSize: '10px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '95px'
+      width: '110px'
     }
   },
   {
     id: 'INVESTIGATION',
     type: 'default',
-    data: { label: 'Loss Prevention\nInvestigation' },
-    position: { x: 860, y: 380 },
+    data: { label: 'Step 9:\nInvestigation' },
+    position: { x: 250, y: 1080 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -661,14 +678,14 @@ const initialNodes = [
       fontSize: '10px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '95px'
+      width: '110px'
     }
   },
   {
     id: 'REPORTING',
     type: 'default',
-    data: { label: 'Reporting &\nAnalytics' },
-    position: { x: 890, y: 380 },
+    data: { label: 'Step 10:\nReporting' },
+    position: { x: 130, y: 1180 },
     style: {
       background: '#9D6BFF',
       color: 'white',
@@ -678,7 +695,7 @@ const initialNodes = [
       fontSize: '10px',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: '95px'
+      width: '110px'
     }
   }
 ];
