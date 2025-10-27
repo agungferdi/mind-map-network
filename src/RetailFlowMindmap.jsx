@@ -321,18 +321,20 @@ const nodeDetails = {
     title: 'Reporting & Analytics',
     category: 'Step 10',
     type: 'Dashboard & Insights',
-    description: 'HQ Dashboard menerima semua data untuk analytics, shrinkage tracking, dan decision making.',
-    vendor: 'Integrated System',
-    product: 'Central Analytics Dashboard',
+    description: 'HQ Dashboard menerima semua data untuk analytics, shrinkage tracking, dan decision making menggunakan custom ERP atau software retail management.',
+    vendor: 'Custom ERP / Retail Management Software',
+    product: 'SAP Retail, Oracle NetSuite, Shopify Plus, atau Custom ERP, ODOO',
     specs: [
-      'Real-time Inventory Accuracy',
-      'Shrinkage Rate Tracking',
-      'Loss Prevention Events',
-      'Sales by Category',
-      'Customer Behavior Patterns',
-      'Staff Performance Metrics'
+      'Real-time Inventory Accuracy Dashboard',
+      'Shrinkage Rate Tracking & Analysis',
+      'Loss Prevention Events Log',
+      'Sales Performance by Category',
+      'Customer Behavior Analytics',
+      'Staff Performance Metrics & KPI',
+      'Automated Alert System',
+      'Multi-Location Reporting'
     ],
-    additionalInfo: 'Semua data dari warehouse hingga exit gate teraggregasi. Dashboard menampilkan KPI real-time. Alerts automatic untuk anomalies.'
+    additionalInfo: 'Semua data dari warehouse hingga exit gate teraggregasi ke dalam sistem ERP pusat. Dashboard menampilkan KPI real-time dengan alert otomatis untuk anomali, discrepancy, dan trend shrinkage. Management dapat membuat decision berdasarkan data akurat dari RFID integration dan POS system.'
   }
 };
 
