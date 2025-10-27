@@ -73,18 +73,18 @@ const nodeDetails = {
     vendor: 'Checkpoint + Chainway',
     product: 'Checkpoint Cyclone MAX (NXP UCode 9) + Chainway R3/C5 Writer atau Chainway RFID Printer',
     specs: [
-      'Checkpoint Cyclone MAX RFID Inlay',
-      'NXP UCode 9 Chip (96-bit EPC)',
+      'Checkpoint Cyclone MAX RFID Inlay (NXP UCode 9)',
+      '96-bit EPC Capacity per Tag',
+      'Encoding Sequential (1 per 1)',
+      'Chainway R3: ~2-3 sec/tag (Handheld Writer)',
+      'Chainway C5: ~2-3 sec/tag (Fixed Writer)',
+      'Chainway Printer: ~3-5 sec/label (Print + Encode)',
+      'Throughput: 720-1,800 tags/hour',
       'Multi-format Label Options',
       'Item-level Tracking & Traceability',
-      'EPC Standard Compliant',
-      'Chainway R3 UHF RFID Writer (Handheld)',
-      'Chainway C5 UHF RFID Writer (Fixed)',
-      'Chainway RFID Printer (Direct Print + Encode)',
-      'High Detection Rate (>95%)',
-      'Batch Encoding Capability'
+      'EPC Standard Compliant'
     ],
-    additionalInfo: 'Checkpoint Cyclone MAX tags menggunakan NXP UCode 9 chip dengan kapasitas EPC 96-bit untuk unique product identification. Untuk encoding EPC ke tags, dapat menggunakan: (1) Chainway R3 - handheld UHF writer yang fleksibel untuk encoding di berbagai lokasi, (2) Chainway C5 - fixed RFID writer untuk high-volume encoding di receiving dock, atau (3) Chainway RFID Printer - solusi all-in-one yang langsung print barcode dan encode RFID dalam satu proses. Setiap label memiliki unique EPC code yang dapat dilacak real-time di seluruh supply chain dari receiving hingga point-of-sale. Target volume: ~5000 labels per batch untuk typical retail deployment.'
+    additionalInfo: 'Checkpoint Cyclone MAX tags menggunakan NXP UCode 9 chip dengan kapasitas EPC 96-bit untuk unique product identification. Encoding dilakukan SEQUENTIAL (satu tag per satu, bukan batch sekaligus). Opsi device: (1) Chainway R3 - handheld UHF writer, fleksibel untuk multiple lokasi, ~2-3 detik per tag; (2) Chainway C5 - fixed RFID writer, ideal high-volume di receiving dock, ~2-3 detik per tag; (3) Chainway RFID Printer - all-in-one solution print barcode + encode dalam satu cycle, ~3-5 detik per label. Typical throughput: 720-1,800 tags/jam. Untuk 5000 labels batch: ~3-5 jam tergantung device dan setup. Setiap label memiliki unique EPC code yang dapat dilacak real-time di seluruh supply chain dari receiving hingga point-of-sale.'
   },
 
   PHASE2: {
