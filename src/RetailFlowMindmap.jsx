@@ -69,17 +69,22 @@ const nodeDetails = {
     title: 'Product Tagging',
     category: 'Step 0',
     type: 'Source Tagging',
-    description: 'Setiap item dilengkapi dengan Checkpoint RFID Label dari supplier atau di receiving dock.',
-    vendor: 'Checkpoint',
-    product: 'Checkpoint Intelligent RFID Labels',
+    description: 'Setiap item dilengkapi dengan Checkpoint RFID Label yang sudah encoded dari supplier atau di receiving dock menggunakan Chainway writer/printer.',
+    vendor: 'Checkpoint + Chainway',
+    product: 'Checkpoint Cyclone MAX (NXP UCode 9) + Chainway R3/C5 Writer atau Chainway RFID Printer',
     specs: [
-      'Multi-format Labels',
-      'Item-level Tracking',
+      'Checkpoint Cyclone MAX RFID Inlay',
+      'NXP UCode 9 Chip (96-bit EPC)',
+      'Multi-format Label Options',
+      'Item-level Tracking & Traceability',
       'EPC Standard Compliant',
-      'High Detection Rate',
-      'Multiple Tech Options (RFID+EAS)'
+      'Chainway R3 UHF RFID Writer (Handheld)',
+      'Chainway C5 UHF RFID Writer (Fixed)',
+      'Chainway RFID Printer (Direct Print + Encode)',
+      'High Detection Rate (>95%)',
+      'Batch Encoding Capability'
     ],
-    additionalInfo: 'Label dirancang khusus untuk item. Setiap label memiliki unique EPC code yang dapat dilacak di seluruh supply chain.'
+    additionalInfo: 'Checkpoint Cyclone MAX tags menggunakan NXP UCode 9 chip dengan kapasitas EPC 96-bit untuk unique product identification. Untuk encoding EPC ke tags, dapat menggunakan: (1) Chainway R3 - handheld UHF writer yang fleksibel untuk encoding di berbagai lokasi, (2) Chainway C5 - fixed RFID writer untuk high-volume encoding di receiving dock, atau (3) Chainway RFID Printer - solusi all-in-one yang langsung print barcode dan encode RFID dalam satu proses. Setiap label memiliki unique EPC code yang dapat dilacak real-time di seluruh supply chain dari receiving hingga point-of-sale. Target volume: ~5000 labels per batch untuk typical retail deployment.'
   },
 
   PHASE2: {
