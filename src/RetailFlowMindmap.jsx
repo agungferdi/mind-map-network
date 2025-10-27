@@ -49,17 +49,20 @@ const nodeDetails = {
     title: 'Receiving Scan',
     category: 'Step 1',
     type: 'Data Capture',
-    description: 'Warehouse staff menggunakan Chainway handheld readers untuk scan incoming items.',
+    description: 'Warehouse staff menggunakan Chainway handheld atau fixed RFID readers untuk scan incoming items di receiving gate.',
     vendor: 'Chainway',
-    product: 'Chainway C72/C5 Handheld RFID Reader',
+    product: 'Chainway C72/C5 Handheld RFID Reader atau URA4 Fixed Gate Reader',
     specs: [
-      'Multiple Tag Reading',
+      'Multiple Tag Reading (Batch)',
       'Batch Processing Capability',
-      'Real-time Data Sync',
-      '30m Read Range',
-      '1300+ tags/detik'
+      'Real-time Data Sync to WMS',
+      '30m+ Read Range',
+      '1300+ tags/detik throughput',
+      'Handheld Option: Mobile & Flexible',
+      'Fixed Gate Option: URA4 Automated Scanning',
+      'Automatic Incoming Receipt Generation'
     ],
-    additionalInfo: 'Operator scan setiap pallet/carton dengan reader. Sistem otomatis mencatat kehadiran barang tanpa perlu stop aliran barang.'
+    additionalInfo: 'Operator dapat scan setiap pallet/carton dengan Chainway C72/C5 handheld reader secara mobile, atau setup Chainway URA4 fixed reader di incoming gate untuk automatic batch reading. Sistem otomatis mencatat kehadiran barang tanpa perlu stop aliran barang. URA4 (4-channel fixed RFID reader) ideal untuk high-volume receiving dengan continuous flow - items dapat di-read otomatis saat melewati gate area tanpa perlu manual interaction. Data real-time sync ke WMS untuk instant inventory update.'
   },
 
   TAGGING: {
@@ -117,17 +120,20 @@ const nodeDetails = {
     title: 'Display Monitoring',
     category: 'Step 3',
     type: 'Continuous Tracking',
-    description: 'Checkpoint SFERO system dan Chainway readers memantau pergerakan barang secara real-time.',
+    description: 'Checkpoint SFERO system dan Chainway readers memantau pergerakan barang secara real-time di display area.',
     vendor: 'Checkpoint + Chainway',
-    product: 'SFERO System + Chainway Fixed Readers',
+    product: 'SFERO System + Chainway URA4 Fixed RFID Reader',
     specs: [
       'Real-time Movement Detection',
       '95%+ Detection Rate',
       'Section-based Inventory',
       'Automatic Stock Alerts',
-      'Planogram Compliance Check'
+      'Planogram Compliance Check',
+      'Android 9.0 Platform (URA4)',
+      'Impinj E710 / R2000 Chip',
+      'RS232, RJ45, HDMI Connectivity'
     ],
-    additionalInfo: 'Sistem otomatis mendeteksi setiap pergerakan barang. Alert muncul jika stock rendah atau barang tidak sesuai planogram.'
+    additionalInfo: 'Chainway URA4 adalah 4-channel fixed RFID reader berbasis Android 9.0 dengan chip Impinj E710/R2000. Dengan RS232, RJ45, dan HDMI support, URA4 dapat kompatibel dengan berbagai tipe antenna. High stability dan performance terbaik untuk warehouse management, retail clothing/footwear, jewelry monitoring, dan shelf inventory management. Sistem otomatis mendeteksi setiap pergerakan barang secara real-time. Alert muncul instant jika stock rendah, barang tidak sesuai planogram, atau ada item yang dipindahkan dari lokasi yang ditentukan.'
   },
 
   PHASE3: {
