@@ -76,15 +76,14 @@ const nodeDetails = {
       'Checkpoint Cyclone MAX RFID Inlay (NXP UCode 9)',
       '96-bit EPC Capacity per Tag',
       'Encoding Sequential (1 per 1)',
-      'Chainway R3: ~2-3 sec/tag (Handheld Writer)',
-      'Chainway C5: ~2-3 sec/tag (Fixed Writer)',
-      'Chainway Printer: ~3-5 sec/label (Print + Encode)',
-      'Throughput: 720-1,800 tags/hour',
+      'Chainway R3: ~1 sec/tag (Handheld Writer, with pre-prepared encode)',
+      'Chainway C5: ~1 sec/tag (Fixed Writer, with pre-prepared encode)',
+      'Chainway Printer: ~3-5 sec/label (Print + Encode combined)',
       'Multi-format Label Options',
       'Item-level Tracking & Traceability',
       'EPC Standard Compliant'
     ],
-    additionalInfo: 'Checkpoint Cyclone MAX tags menggunakan NXP UCode 9 chip dengan kapasitas EPC 96-bit untuk unique product identification. Encoding dilakukan SEQUENTIAL (satu tag per satu, bukan batch sekaligus). Opsi device: (1) Chainway R3 - handheld UHF writer, fleksibel untuk multiple lokasi, ~2-3 detik per tag; (2) Chainway C5 - fixed RFID writer, ideal high-volume di receiving dock, ~2-3 detik per tag; (3) Chainway RFID Printer - all-in-one solution print barcode + encode dalam satu cycle, ~3-5 detik per label. Typical throughput: 720-1,800 tags/jam. Untuk 5000 labels batch: ~3-5 jam tergantung device dan setup. Setiap label memiliki unique EPC code yang dapat dilacak real-time di seluruh supply chain dari receiving hingga point-of-sale.'
+    additionalInfo: 'Checkpoint Cyclone MAX tags menggunakan NXP UCode 9 chip dengan kapasitas EPC 96-bit untuk unique product identification. Encoding dilakukan SEQUENTIAL (satu tag per satu, bukan batch sekaligus). Opsi device: (1) Chainway R3 - handheld UHF writer, fleksibel untuk multiple lokasi, ~1 detik per tag (dengan pre-prepared encode); (2) Chainway C5 - fixed RFID writer, ideal high-volume di receiving dock, ~1 detik per tag (dengan pre-prepared encode); (3) Chainway RFID Printer - all-in-one solution print barcode + encode dalam satu cycle, ~3-5 detik per label. Typical throughput optimized: 3,600+ tags/jam (R3/C5 dengan pre-prepared encode), atau 720-1,800 tags/jam (standard setup). Untuk 5000 labels batch: ~1.5 jam dengan optimized setup (R3/C5 pre-prepared), atau ~3-5 jam dengan standard setup. Setiap label memiliki unique EPC code yang dapat dilacak real-time di seluruh supply chain dari receiving hingga point-of-sale.',
   },
 
   PHASE2: {
