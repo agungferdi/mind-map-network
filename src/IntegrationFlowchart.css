@@ -134,6 +134,17 @@
   animation: slideUp 0.3s ease-in-out;
 }
 
+.modal-content-with-image {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease-in-out;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(30px);
@@ -192,6 +203,36 @@
 
 .modal-body {
   padding: 25px;
+}
+
+.modal-body-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 25px;
+  padding: 25px;
+}
+
+.modal-image-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .modal-section {

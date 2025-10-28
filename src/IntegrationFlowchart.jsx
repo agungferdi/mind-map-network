@@ -10,6 +10,12 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import './IntegrationFlowchart.css';
 
+// Import product images
+import ura4Image from './images/URA4.png.png';
+import c5Image from './images/c5.png.png';
+import c72Image from './images/c72.png.png';
+import c66Image from './images/c66.png.png';
+
 const nodeDetails = {
   W1: {
     title: 'Inbound Reception (URA4)',
@@ -18,6 +24,7 @@ const nodeDetails = {
     description: 'Penerimaan barang di mana setiap pallet dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal.',
     brand: 'Chainway',
     product: 'Chainway URA4 Fixed RFID Reader',
+    image: ura4Image,
     specs: [
       'OS: Android 9.0',
       'RFID Chip: Impinj E710 / R2000',
@@ -36,6 +43,7 @@ const nodeDetails = {
     description: 'C5 handheld UHF RFID computer untuk real-time inventory tracking dan storage optimization. Operator dapat melakukan stock checking di mana saja di warehouse dengan mobility tinggi.',
     brand: 'Chainway',
     product: 'Chainway C5 Handheld UHF RFID Computer',
+    image: c5Image,
     specs: [
       'OS: Android 13',
       'Display: 6.0" HD+ (1440x720)',
@@ -56,6 +64,7 @@ const nodeDetails = {
     description: 'C72 handheld RFID reader untuk cycle count dan audit inventory. Device yang powerful dengan RFID reading capability untuk verifikasi inventory secara cepat dan akurat.',
     brand: 'Chainway',
     product: 'Chainway C72 Handheld UHF RFID Reader',
+    image: c72Image,
     specs: [
       'OS: Android 13',
       'Display: 6.0" HD+ IPS (1440x720)',
@@ -76,6 +85,7 @@ const nodeDetails = {
     description: 'Tunnel RFID dengan URA4 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah barang yang tidak ter-verify meninggalkan warehouse.',
     brand: 'Chainway',
     product: 'Chainway URA4 Fixed RFID Reader',
+    image: ura4Image,
     specs: [
       'OS: Android 9.0',
       'RFID Chip: Impinj E710 / R2000',
@@ -337,7 +347,7 @@ function IntegrationFlowchart() {
       {/* Modal Popup */}
       {showModal && selectedNode && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content-with-image" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>✕</button>
             
             <div className="modal-header">
@@ -345,35 +355,44 @@ function IntegrationFlowchart() {
               <span className="modal-category">{selectedNode.category}</span>
             </div>
 
-            <div className="modal-body">
-              <div className="modal-section">
-                <h4>Deskripsi</h4>
-                <p>{selectedNode.description}</p>
-              </div>
+            <div className="modal-body-grid">
+              {/* Left Column: Product Image */}
+              {selectedNode.image && (
+                <div className="modal-image-section">
+                  <img 
+                    src={selectedNode.image} 
+                    alt={selectedNode.product} 
+                    className="product-image"
+                  />
+                </div>
+              )}
 
-              <div className="modal-section">
-                <h4>Brand & Produk</h4>
-                <p><strong>Brand:</strong> {selectedNode.brand}</p>
-                <p><strong>Produk:</strong> {selectedNode.product}</p>
-              </div>
+              {/* Right Column: Product Information */}
+              <div className="modal-info-section">
+                <div className="modal-section">
+                  <h4>Deskripsi</h4>
+                  <p>{selectedNode.description}</p>
+                </div>
 
-              <div className="modal-section">
-                <h4>Spesifikasi</h4>
-                <ul>
-                  {selectedNode.specs.map((spec, idx) => (
-                    <li key={idx}>{spec}</li>
-                  ))}
-                </ul>
-              </div>
+                <div className="modal-section">
+                  <h4>Brand & Produk</h4>
+                  <p><strong>Brand:</strong> {selectedNode.brand}</p>
+                  <p><strong>Produk:</strong> {selectedNode.product}</p>
+                </div>
 
-              <div className="modal-section">
-                <h4>Data Flow</h4>
-                <p className="data-flow">{selectedNode.dataFlow}</p>
-              </div>
+                <div className="modal-section">
+                  <h4>Spesifikasi</h4>
+                  <ul>
+                    {selectedNode.specs.map((spec, idx) => (
+                      <li key={idx}>{spec}</li>
+                    ))}
+                  </ul>
+                </div>
 
-              <div className="modal-section">
-                <h4>Fungsi</h4>
-                <p><strong>Tipe:</strong> {selectedNode.type}</p>
+                <div className="modal-section">
+                  <h4>Fungsi</h4>
+                  <p><strong>Tipe:</strong> {selectedNode.type}</p>
+                </div>
               </div>
             </div>
           </div>
