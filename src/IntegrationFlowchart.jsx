@@ -21,7 +21,7 @@ const nodeDetails = {
     title: 'Inbound Reception (URA4)',
     category: 'Warehouse Inbound',
     type: 'Fixed RFID Portal',
-    description: 'Penerimaan barang di mana setiap pallet dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal hingga 1300+ tags/sec.',
+    description: 'Penerimaan barang di mana setiap product dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal hingga 1300+ tags/sec.',
     brand: 'Chainway',
     product: 'Chainway URA4 4-Channel Fixed RFID Reader',
     image: ura4Image,
@@ -44,7 +44,7 @@ const nodeDetails = {
       'WLAN: 802.11 a/b/g/n/ac, 2.4G/5G',
       'Operating Temp: -25°C to 65°C'
     ],
-    additionalInfo: 'Barang otomatis tercatat di inventory digital tanpa perlu operator menghentikan aliran. URA4 dengan Android 9, Impinj E Series chip, dan 4-channel capability memberikan stabilitas tinggi. Mendukung Impinj Gen2X untuk enhanced performance. Read rate 1300+ tags/sec dengan receive sensitivity <-84dBm. Support multiple power options (DC/POE/POE+) dan connectivity (RS232/RJ45/USB/HDMI). Compatible dengan berbagai tipe antenna (6dBic, 9dBic). Operating temperature range luas (-25°C to 65°C) untuk warehouse environment ekstrim.'
+    additionalInfo: 'Setiap product otomatis tercatat di inventory digital tanpa perlu operator menghentikan aliran. URA4 dengan Android 9, Impinj E Series chip, dan 4-channel capability memberikan stabilitas tinggi. Mendukung Impinj Gen2X untuk enhanced performance. Read rate 1300+ tags/sec dengan receive sensitivity <-84dBm. Support multiple power options (DC/POE/POE+) dan connectivity (RS232/RJ45/USB/HDMI). Compatible dengan berbagai tipe antenna (6dBic, 9dBic). Operating temperature range luas (-25°C to 65°C) untuk warehouse environment ekstrim.'
   },
   W2: {
     title: 'Storage & Inventory (C5)',
@@ -115,7 +115,7 @@ const nodeDetails = {
     title: 'Outbound Verification (URA4)',
     category: 'Warehouse Outbound',
     type: 'Automated Tunnel Check',
-    description: 'Tunnel RFID dengan URA4 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah barang yang tidak ter-verify meninggalkan warehouse dengan read rate hingga 1300+ tags/sec.',
+    description: 'Tunnel RFID dengan URA4 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah product yang tidak ter-verify meninggalkan warehouse dengan read rate hingga 1300+ tags/sec.',
     brand: 'Chainway',
     product: 'Chainway URA4 4-Channel Fixed RFID Reader',
     image: ura4Image,
@@ -137,7 +137,7 @@ const nodeDetails = {
       'Antenna Detector Supported',
       'Operating Temp: -25°C to 65°C'
     ],
-    additionalInfo: 'Setiap pallet yang keluar harus melewati tunnel RFID. URA4 dengan 4-channel capability dan high stability mencegah shipment dengan discrepancy. Read rate 1300+ tags/sec memastikan no-miss detection. Android 9 platform dengan octa-core 1.8GHz processor untuk processing cepat. Support automated rejection alert, ambient temperature monitor, dan antenna detector untuk reliability maksimal. Multiple connectivity options (RS232/RJ45/USB/HDMI) memudahkan integration dengan warehouse management system.'
+    additionalInfo: 'Setiap product yang keluar harus melewati tunnel RFID. URA4 dengan 4-channel capability dan high stability mencegah shipment dengan discrepancy. Read rate 1300+ tags/sec memastikan no-miss detection. Android 9 platform dengan octa-core 1.8GHz processor untuk processing cepat. Support automated rejection alert, ambient temperature monitor, dan antenna detector untuk reliability maksimal. Multiple connectivity options (RS232/RJ45/USB/HDMI) memudahkan integration dengan warehouse management system.'
   },
   C1: {
     title: 'Middleware Layer',
