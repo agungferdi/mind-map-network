@@ -21,7 +21,7 @@ const nodeDetails = {
     title: 'Inbound Reception (URA4)',
     category: 'Warehouse Inbound',
     type: 'Fixed RFID Portal',
-    description: 'Penerimaan barang di mana setiap product dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal hingga 1300+ tags/sec.',
+    description: 'Penerimaan barang di mana setiap pallet atau product dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal hingga 1300+ tags/sec.',
     brand: 'Chainway',
     product: 'Chainway URA4 4-Channel Fixed RFID Reader',
     image: ura4Image,
