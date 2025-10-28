@@ -21,82 +21,123 @@ const nodeDetails = {
     title: 'Inbound Reception (URA4)',
     category: 'Warehouse Inbound',
     type: 'Fixed RFID Portal',
-    description: 'Penerimaan barang di mana setiap pallet dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal.',
+    description: 'Penerimaan barang di mana setiap pallet dilengkapi RFID label. Fixed RFID reader URA4 ditempatkan di pintu masuk untuk automated reading. Sistem membaca dengan akurasi tinggi dan kecepatan optimal hingga 1300+ tags/sec.',
     brand: 'Chainway',
-    product: 'Chainway URA4 Fixed RFID Reader',
+    product: 'Chainway URA4 4-Channel Fixed RFID Reader',
     image: ura4Image,
     specs: [
-      'OS: Android 9.0',
-      'RFID Chip: Impinj E710 / R2000',
-      'Frequency: 860-960 MHz (UHF)',
-      '4-Channel Fixed Reader',
-      'Ports: RS232, RJ45, HDMI',
-      'Connectivity: TCP/IP, HTTP API',
-      'Application: Warehouse, Retail, Jewelry, Clothing'
+      'OS: Android 9',
+      'CPU: Octa-core 1.8GHz',
+      'RAM+ROM: 3GB+32GB / 2GB+16GB (Optional)',
+      'RFID: Impinj E Series (Gen2X Supported)',
+      'Protocol: EPC Global UHF Class 1 Gen2 / ISO18000-6C',
+      'Frequency: 865-868MHz / 920-925MHz / 902-928MHz',
+      '4-Channel 50Ω TNC Port',
+      'Output Power: 1W (30dBm) / 2W Optional (33dBm)',
+      'Power Precision: +/- 1dB',
+      'Receive Sensitivity: < -84dBm',
+      'Read Rate: 1300+ tags/sec',
+      'Connectivity: RS232, RJ45, 3xUSB2.0, Type-C, HDMI',
+      'Power: DC 12V, POE (802.3af), POE+ (802.3at)',
+      'Antenna Support: 6dBic, 9dBic',
+      'Ethernet: 10/100 Base-T',
+      'WLAN: 802.11 a/b/g/n/ac, 2.4G/5G',
+      'Operating Temp: -25°C to 65°C'
     ],
-    additionalInfo: 'Barang otomatis tercatat di inventory digital tanpa perlu operator menghentikan aliran. URA4 dengan Android 9.0 dan Impinj chip memberikan stabilitas tinggi dan kompatibilitas dengan berbagai antenna.'
+    additionalInfo: 'Barang otomatis tercatat di inventory digital tanpa perlu operator menghentikan aliran. URA4 dengan Android 9, Impinj E Series chip, dan 4-channel capability memberikan stabilitas tinggi. Mendukung Impinj Gen2X untuk enhanced performance. Read rate 1300+ tags/sec dengan receive sensitivity <-84dBm. Support multiple power options (DC/POE/POE+) dan connectivity (RS232/RJ45/USB/HDMI). Compatible dengan berbagai tipe antenna (6dBic, 9dBic). Operating temperature range luas (-25°C to 65°C) untuk warehouse environment ekstrim.'
   },
   W2: {
     title: 'Storage & Inventory (C5)',
     category: 'Warehouse',
     type: 'Handheld UHF RFID Computer',
-    description: 'C5 handheld UHF RFID computer untuk real-time inventory tracking dan storage optimization. Operator dapat melakukan stock checking di mana saja di warehouse dengan mobility tinggi.',
+    description: 'C5 handheld UHF RFID computer untuk real-time inventory tracking dan storage optimization. Operator dapat melakukan stock checking di mana saja di warehouse dengan mobility tinggi dan performa UHF terbaik.',
     brand: 'Chainway',
     product: 'Chainway C5 Handheld UHF RFID Computer',
     image: c5Image,
     specs: [
-      'OS: Android 13',
-      'Display: 6.0" HD+ (1440x720)',
-      'CPU: Octa-core 2.0GHz',
-      'RFID: UHF Gen2 (EPC C1G2)',
-      'Read Range: 0-20m (depends on tag & antenna)',
-      'Battery: 5200mAh (Removable)',
+      'OS: Android 11/13',
+      'CPU: Octa-core 2.2GHz',
+      'RAM+ROM: 3GB+32GB / 4GB+64GB',
+      'Display: 5" (1280x720) / 6" (2160x1080)',
+      'RFID: Impinj E Series (Gen2X Supported)',
+      'Protocol: EPCglobal Gen2 (ISO18000-6C)',
+      'Frequency: 865-868MHz / 920-925MHz / 902-928MHz',
+      'Output Power: 1W (30dBm) / 2W Optional',
+      'Max Read Range: 30m (MR6), 32m (M750), 33m (H3)',
+      'Read Rate: 1300+ tags/sec',
+      'Battery: 6700mAh / 13400mAh Pistol Battery',
       'Durability: IP65, 1.5m Drop Test',
-      '1D/2D Barcode Scanner',
-      'NFC, 4G, WiFi, Bluetooth 5.0'
+      'Camera: 5MP Front, 13MP Rear',
+      '2D Barcode, NFC, Fingerprint (Optional)'
     ],
-    additionalInfo: 'C5 dengan Android 13 dan UHF RFID reader memberikan flexibility untuk mobile inventory management. Device yang tangguh (IP65, 1.5m drop proof) cocok untuk warehouse environment yang demanding.'
+    additionalInfo: 'C5 dengan Android 11/13 dan UHF module berbasis Impinj E Series memberikan performa industry-leading. Mendukung Impinj Gen2X untuk enhanced RFID performance. Read range hingga 33m dan 1300+ tags/sec. Battery removable 6700mAh atau 13400mAh pistol battery untuk operational shift panjang. IP65 rated untuk warehouse environment yang demanding.'
   },
   W3: {
-    title: 'Cycle Count & Audit (C72)',
+    title: 'Cycle Count & Audit (C72 / C66)',
     category: 'Warehouse',
     type: 'Inventory Verification',
-    description: 'C72 handheld RFID reader untuk cycle count dan audit inventory. Device yang powerful dengan RFID reading capability untuk verifikasi inventory secara cepat dan akurat.',
+    description: 'C72 atau C66 handheld RFID reader untuk cycle count dan audit inventory. C72: high-performance dengan battery besar untuk intensive operations. C66: compact design dengan quick charge untuk lightweight tasks.',
     brand: 'Chainway',
-    product: 'Chainway C72 Handheld UHF RFID Reader',
+    product: 'Chainway C72 / C66 Handheld UHF RFID Reader',
     image: c72Image,
+    image2: c66Image,
     specs: [
-      'OS: Android 13',
-      'Display: 6.0" HD+ IPS (1440x720)',
+      '=== C72 Specifications ===',
+      'OS: Android 11/13',
+      'CPU: Octa-core 2.3GHz',
+      'RAM+ROM: 3GB+32GB / 4GB+64GB',
+      'Display: 5.2" IPS 1920x1080',
+      'RFID: Impinj E Series (Gen2X Supported)',
+      'Protocol: EPC C1 GEN2 / ISO18000-6C',
+      'Frequency: 865-868MHz / 920-925MHz / 902-928MHz',
+      'Output Power: 1W (30dBm) / 2W Optional',
+      'Max Read Range: 26m (MR6), 28m (M750), 30m (H3)',
+      'Read Rate: 1300+ tags/sec',
+      'Battery: 8000mAh',
+      'Durability: IP65, 1.5m Drop',
+      'Camera: 13MP Autofocus with Flash',
+      '',
+      '=== C66 Specifications ===',
+      'OS: Android 11/13',
       'CPU: Octa-core 2.0GHz',
-      'RFID: UHF Gen2 (EPC C1G2)',
-      'Read Range: 0-25m (antenna dependent)',
-      'Battery: 6700mAh (Hot-swap supported)',
-      'Durability: IP67, 1.8m Drop Test',
-      '1D/2D Barcode Scanner',
-      'NFC, 4G, WiFi 6, Bluetooth 5.1'
+      'RAM+ROM: 3GB+32GB / 4GB+64GB / 6GB+128GB',
+      'Display: 5.5" IPS 1440x720',
+      'RFID: Built-in UHF (Optional)',
+      'Battery: 4420mAh / 5200mAh (Fingerprint/UHF)',
+      'Quick Charge: QC3.0 Supported',
+      'Durability: IP65 / IP67 Optional, 1.8m Drop',
+      'Camera: 13MP Rear Autofocus',
+      '2D Barcode, NFC, Fingerprint (Optional)'
     ],
-    additionalInfo: 'Cycle count yang biasanya berhari-hari kini hanya butuh beberapa jam. C72 dengan Android 13, battery 6700mAh, dan IP67 rating memberikan reliability tinggi untuk intensive warehouse operations.'
+    additionalInfo: 'Cycle count yang biasanya berhari-hari kini hanya butuh beberapa jam. C72: intensive operations dengan 8000mAh battery, IP65, Impinj E Series UHF module, read rate 1300+ tags/sec, ideal untuk high-volume warehouse. C66: compact & cost-effective dengan 5.5" display, 5200mAh battery, QC3.0 quick charge, IP65/IP67, UHF sled support untuk high extensibility, ideal untuk lightweight warehouse tasks.'
   },
   W4: {
     title: 'Outbound Verification (URA4)',
     category: 'Warehouse Outbound',
     type: 'Automated Tunnel Check',
-    description: 'Tunnel RFID dengan URA4 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah barang yang tidak ter-verify meninggalkan warehouse.',
+    description: 'Tunnel RFID dengan URA4 untuk verifikasi otomatis sebelum shipment keluar. Sistem mencegah barang yang tidak ter-verify meninggalkan warehouse dengan read rate hingga 1300+ tags/sec.',
     brand: 'Chainway',
-    product: 'Chainway URA4 Fixed RFID Reader',
+    product: 'Chainway URA4 4-Channel Fixed RFID Reader',
     image: ura4Image,
     specs: [
-      'OS: Android 9.0',
-      'RFID Chip: Impinj E710 / R2000',
-      'Frequency: 860-960 MHz (UHF)',
-      '4-Channel Fixed Reader',
-      'Ports: RS232, RJ45, HDMI',
-      'Connectivity: TCP/IP, HTTP API',
+      'OS: Android 9',
+      'CPU: Octa-core 1.8GHz',
+      'RAM+ROM: 3GB+32GB / 2GB+16GB (Optional)',
+      'RFID: Impinj E Series (Gen2X Supported)',
+      'Protocol: EPC Global UHF Class 1 Gen2 / ISO18000-6C',
+      'Frequency: 865-868MHz / 920-925MHz / 902-928MHz',
+      '4-Channel 50Ω TNC Port',
+      'Output Power: 1W (30dBm) / 2W Optional (33dBm)',
+      'Receive Sensitivity: < -84dBm',
+      'Read Rate: 1300+ tags/sec',
+      'Connectivity: RS232, RJ45, 3xUSB2.0, Type-C, HDMI',
+      'Power: DC 12V, POE (802.3af), POE+ (802.3at)',
       'Automated Rejection Alert',
-      'High Stability & Performance'
+      'Ambient Temp Monitor Supported',
+      'Antenna Detector Supported',
+      'Operating Temp: -25°C to 65°C'
     ],
-    additionalInfo: 'Setiap pallet yang keluar harus melewati tunnel RFID. URA4 dengan 4-channel capability dan high stability mencegah shipment dengan discrepancy. Android 9.0 platform memudahkan integration dengan warehouse management system.'
+    additionalInfo: 'Setiap pallet yang keluar harus melewati tunnel RFID. URA4 dengan 4-channel capability dan high stability mencegah shipment dengan discrepancy. Read rate 1300+ tags/sec memastikan no-miss detection. Android 9 platform dengan octa-core 1.8GHz processor untuk processing cepat. Support automated rejection alert, ambient temperature monitor, dan antenna detector untuk reliability maksimal. Multiple connectivity options (RS232/RJ45/USB/HDMI) memudahkan integration dengan warehouse management system.'
   },
   C1: {
     title: 'Middleware Layer',
@@ -161,7 +202,7 @@ const initialNodes = [
   {
     id: 'W3',
     type: 'default',
-    data: { label: 'Cycle Count\n& Audit\n(C72)' },
+    data: { label: 'Cycle Count\n& Audit\n(C72/C66)' },
     position: { x: 600, y: 150 },
     style: {
       background: '#FFD700',
@@ -313,7 +354,7 @@ function IntegrationFlowchart() {
     <div style={{ width: '100vw', height: '100vh' }}>
       <div className="header">
         <h1>Warehouse Integration Flow</h1>
-        <p>Chainway RFID Solution - Inbound (URA4) → Storage (C5) → Audit (C72) → Outbound (URA4) → Middleware API Gateway → Backend DB</p>
+        <p>Chainway RFID Solution - Inbound (URA4) → Storage (C5) → Audit (C72/C66) → Outbound (URA4) → Middleware API Gateway → Backend DB</p>
       </div>
       
       <ReactFlow
@@ -356,14 +397,24 @@ function IntegrationFlowchart() {
             </div>
 
             <div className="modal-body-grid">
-              {/* Left Column: Product Image */}
-              {selectedNode.image && (
+              {/* Left Column: Product Image(s) */}
+              {(selectedNode.image || selectedNode.image2) && (
                 <div className="modal-image-section">
-                  <img 
-                    src={selectedNode.image} 
-                    alt={selectedNode.product} 
-                    className="product-image"
-                  />
+                  {selectedNode.image && (
+                    <img 
+                      src={selectedNode.image} 
+                      alt={selectedNode.product} 
+                      className="product-image"
+                      style={{ marginBottom: selectedNode.image2 ? '15px' : '0' }}
+                    />
+                  )}
+                  {selectedNode.image2 && (
+                    <img 
+                      src={selectedNode.image2} 
+                      alt={`${selectedNode.product} - Option 2`} 
+                      className="product-image"
+                    />
+                  )}
                 </div>
               )}
 
@@ -411,7 +462,7 @@ function IntegrationFlowchart() {
         </div>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#FFD700' }}></span>
-          <span>Cycle Count (C72)</span>
+          <span>Cycle Count (C72/C66)</span>
         </div>
         <div className="legend-item">
           <span className="legend-color" style={{ background: '#9D6BFF' }}></span>
