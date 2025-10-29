@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import IntegrationFlowchart from './IntegrationFlowchart.jsx'
 import RetailFlowMindmap from './RetailFlowMindmap.jsx'
+import C61RFIDArchitecture from './C61RFIDArchitecture.jsx'
 import './index.css'
 
 function MainApp() {
@@ -84,12 +85,29 @@ function MainApp() {
           >
             Retail Flow AIDC
           </button>
+          <button
+            onClick={() => handlePageSwitch('c61')}
+            style={{
+              padding: '8px 16px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              fontSize: '13px',
+              background: currentPage === 'c61' ? '#4ECDC4' : '#ddd',
+              color: currentPage === 'c61' ? 'white' : '#333',
+              transition: 'all 0.3s'
+            }}
+          >
+            C61 RFID Architecture
+          </button>
         </div>
       </div>
       <div style={{ marginTop: '60px' }}>
         {currentPage === 'network' && <App />}
         {currentPage === 'integration' && <IntegrationFlowchart />}
         {currentPage === 'retail' && <RetailFlowMindmap />}
+        {currentPage === 'c61' && <C61RFIDArchitecture />}
       </div>
     </div>
   );
