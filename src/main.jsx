@@ -86,22 +86,6 @@ function MainApp() {
             Retail Flow AIDC
           </button>
           <button
-            onClick={() => handlePageSwitch('c61')}
-            style={{
-              padding: '8px 16px',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-              fontSize: '13px',
-              background: currentPage === 'c61' ? '#4ECDC4' : '#ddd',
-              color: currentPage === 'c61' ? 'white' : '#333',
-              transition: 'all 0.3s'
-            }}
-          >
-            C61 RFID Architecture
-          </button>
-          <button
             onClick={() => handlePageSwitch('coldstorage')}
             style={{
               padding: '8px 16px',
@@ -123,7 +107,6 @@ function MainApp() {
         {currentPage === 'network' && <App />}
         {currentPage === 'integration' && <IntegrationFlowchart />}
         {currentPage === 'retail' && <RetailFlowMindmap />}
-        {currentPage === 'c61' && <C61RFIDArchitecture />}
         {currentPage === 'coldstorage' && <ColdStorageFoodFlow />}
       </div>
     </div>
