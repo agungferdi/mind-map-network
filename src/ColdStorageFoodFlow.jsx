@@ -11,23 +11,6 @@ import 'reactflow/dist/style.css';
 import './ColdStorageFoodFlow.css';
 
 const nodeDetails = {
-  PROJECT: {
-    title: 'Cold Storage Food Flow - Dim Sum Inc.',
-    category: 'Project Overview',
-    type: 'Inara Group Implementation',
-    description: 'Sistem RFID comprehensive untuk warehouse management bahan makanan dengan cold storage integration. Mencakup receiving, sorting, labeling, storage (cold & normal), stock opname, dan inventory tracking di cabang.',
-    brand: 'Chainway + Tageos + Cirfid',
-    product: 'Integrated RFID Warehouse Solution',
-    specs: [
-      'Created by: Muhammad Agung Ferdiansyah',
-      'Partner: PT Delta Solusi Nusantara',
-      'End User: Inara Group (Dim Sum inc.)',
-      'Solution Focus: Food Material Cold Storage Management',
-      'RFID Integration: Complete Tracking, No Manual Steps'
-    ],
-    additionalInfo: 'Solusi end-to-end terintegrasi penuh tanpa manual processing. Dari truck arrival hingga branch receiving, semua automated dengan RFID technology. Tageos untuk cold storage items, Cirfid untuk metal/liquid items, C5 sebagai mobile powerhouse untuk semua scanning operations.'
-  },
-
   RECEIVING_WAREHOUSE: {
     title: 'Warehouse: Receiving, Sorting, Labeling & Initial Scan',
     category: 'Step 1: Warehouse Processing',
@@ -189,32 +172,12 @@ const nodeDetails = {
 };
 
 const initialNodes = [
-  // PROJECT NODE (Top)
-  {
-    id: 'PROJECT',
-    type: 'default',
-    data: { label: 'Cold Storage\nFood Flow\nDim Sum Inc.' },
-    position: { x: 500, y: 0 },
-    style: {
-      background: '#FF6B6B',
-      color: 'white',
-      border: '3px solid #ef5b5b',
-      borderRadius: '12px',
-      padding: '15px',
-      fontSize: '13px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      width: '200px',
-      boxShadow: '0 0 30px rgba(255, 107, 107, 0.8)'
-    }
-  },
-
   // MAIN FLOW (LEFT TO RIGHT)
   {
     id: 'RECEIVING_WAREHOUSE',
     type: 'default',
     data: { label: 'Step 1:\nWarehouse\nProcessing' },
-    position: { x: 200, y: 150 },
+    position: { x: 305, y: 150 },
     style: {
       background: '#4ECDC4',
       color: 'white',
@@ -468,16 +431,6 @@ const initialEdges = [
     animated: true, 
     style: { stroke: '#F7DC6F', strokeWidth: 2 }, 
     markerEnd: { type: MarkerType.ArrowClosed, color: '#F7DC6F' } 
-  },
-
-  // Back to PROJECT
-  {
-    id: 'PROJECT-RECEIVING_WAREHOUSE',
-    source: 'PROJECT',
-    target: 'RECEIVING_WAREHOUSE',
-    animated: false,
-    style: { stroke: '#FF6B6B', strokeWidth: 1.5 },
-    markerEnd: { type: MarkerType.ArrowClosed, color: '#FF6B6B' }
   }
 ];
 
@@ -504,11 +457,6 @@ function ColdStorageFoodFlow() {
 
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <div className="header">
-        <h1>Cold Storage Food Flow</h1>
-        <p>Inara Group (Dim Sum inc.) - RFID Warehouse Management dengan Cold Storage Integration | Tageos + Cirfid + Chainway</p>
-      </div>
-
       <ReactFlow
         nodes={nodes.map(node => ({
           ...node,
