@@ -45,7 +45,7 @@ const nodeDetails = {
       'Data: Product type, weight, batch, expiry, storage requirement, unique EPC',
       'Speed: Optimized workflow untuk high-volume processing'
     ],
-    additionalInfo: 'Proses terintegrasi tanpa manual. CP30 sekaligus print barcode 2D dan encode RFID. C5 langsung scan setiap label untuk validasi EPC code dan confirm ke system. Output: 100% labeled & verified paket ready untuk storage. Tageos EOS-241 tahan -40°C hingga +85°C untuk frozen items, Cirfid Ci-T5055 untuk metal/liquid items dengan anti-interference design.'
+    additionalInfo: 'Proses terintegrasi tanpa manual. CP30 print dan encode RFID label dalam satu proses. C5 langsung scan setiap label untuk validasi EPC code dan confirm ke system. Output: 100% labeled & verified paket ready untuk storage. Tageos EOS-241 tahan -40°C hingga +85°C untuk frozen items, Cirfid Ci-T5055 untuk metal/liquid items dengan anti-interference design. RFID pure—no barcode fallback, full automation.'
   },
 
   STORAGE_COLD: {
@@ -162,10 +162,9 @@ const nodeDetails = {
       'Batch Tracking: Check & record expiration date, batch number',
       'Multi-location: Separate inventory ledger per branch',
       'Real-time Sync: Data instant update di central Odoo ERP',
-      'Chain of Custody: Complete tracking warehouse → branch → POS',
-      'Scanner: 2D barcode SE4710 untuk fallback scanning'
+      'Chain of Custody: Complete tracking warehouse → branch → POS'
     ],
-    additionalInfo: 'C5 digunakan di cabang untuk receiving scan saat delivery tiba. Staff scan barcode 2D atau RFID EPC code, system confirm item sudah received di cabang location, validate quantity & condition (no damage, not expired). Data automatic update di Odoo dengan branch location tag. Memastikan full traceability dari warehouse central hingga point of sale di cabang. Stock immediately available untuk POS operations.'
+    additionalInfo: 'C5 digunakan di cabang untuk receiving scan saat delivery tiba. Staff scan RFID EPC code, system confirm item sudah received di cabang location, validate quantity & condition (no damage, not expired). Data automatic update di Odoo dengan branch location tag. Memastikan full traceability dari warehouse central hingga point of sale di cabang. Stock immediately available untuk POS operations.'
   },
 
   BACKEND: {

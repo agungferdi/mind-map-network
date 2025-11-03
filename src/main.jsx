@@ -4,6 +4,7 @@ import App from './App.jsx'
 import IntegrationFlowchart from './IntegrationFlowchart.jsx'
 import RetailFlowMindmap from './RetailFlowMindmap.jsx'
 import C61RFIDArchitecture from './C61RFIDArchitecture.jsx'
+import ColdStorageFoodFlow from './ColdStorageFoodFlow.jsx'
 import './index.css'
 
 function MainApp() {
@@ -101,6 +102,22 @@ function MainApp() {
           >
             C61 RFID Architecture
           </button>
+          <button
+            onClick={() => handlePageSwitch('coldstorage')}
+            style={{
+              padding: '8px 16px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              fontSize: '13px',
+              background: currentPage === 'coldstorage' ? '#87CEEB' : '#ddd',
+              color: currentPage === 'coldstorage' ? 'white' : '#333',
+              transition: 'all 0.3s'
+            }}
+          >
+            Dim Sum Inc
+          </button>
         </div>
       </div>
       <div style={{ marginTop: '60px' }}>
@@ -108,6 +125,7 @@ function MainApp() {
         {currentPage === 'integration' && <IntegrationFlowchart />}
         {currentPage === 'retail' && <RetailFlowMindmap />}
         {currentPage === 'c61' && <C61RFIDArchitecture />}
+        {currentPage === 'coldstorage' && <ColdStorageFoodFlow />}
       </div>
     </div>
   );
