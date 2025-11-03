@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import IntegrationFlowchart from './IntegrationFlowchart.jsx'
 import RetailFlowMindmap from './RetailFlowMindmap.jsx'
-import C61RFIDArchitecture from './C61RFIDArchitecture.jsx'
 import ColdStorageFoodFlow from './ColdStorageFoodFlow.jsx'
 import './index.css'
 
